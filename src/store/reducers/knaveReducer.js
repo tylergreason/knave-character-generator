@@ -11,6 +11,11 @@ const knave = (state=defaultState, action) => {
             return state = {
                 ...state
             }
+        case 'GENERATE_ABILITY_SCORES':
+            return state = {
+                ...state, 
+                abilities: action.abilities
+            }
         default: 
             return state 
     }
