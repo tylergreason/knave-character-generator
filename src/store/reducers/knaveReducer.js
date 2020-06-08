@@ -29,6 +29,11 @@ const knave = (state=defaultState, action) => {
         //             [action.trait]: action.newValue
         //         }
         //     }
+        case 'GENERATE_INVENTORY': 
+            return state = {
+                ...state, 
+                inventory: action.inventory
+            }
         default: 
             return state 
     }
