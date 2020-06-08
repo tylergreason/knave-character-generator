@@ -1,4 +1,5 @@
 import React, { Component } from 'react'; 
+import { connect } from 'react-redux'
 
 class Traits extends Component {
     render(){
@@ -11,5 +12,9 @@ class Traits extends Component {
         )
     }
 }
-
-export default Traits
+const mapStateToProps = state => {
+    return {
+        traits: state.knave.traits
+    }
+}
+export default connect(mapStateToProps, {})(Traits)
