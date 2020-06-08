@@ -9,11 +9,13 @@ import Inventory from './components/Inventory'
 
 // actions 
 import { generateAbilityScores } from './store/actions/abilityActions'
+import { generateTraits } from './store/actions/traitActions'
 
 class App extends Component {
     componentDidMount = () => {
         console.log('App mounted')
         this.props.generateAbilityScores();
+        this.props.generateTraits(); 
     }
 
 
@@ -38,5 +40,5 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { generateAbilityScores })(App); 
+export default connect(mapStateToProps, { generateAbilityScores, generateTraits })(App); 
 // export default App;

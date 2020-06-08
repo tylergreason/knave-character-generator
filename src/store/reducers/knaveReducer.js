@@ -7,7 +7,7 @@ const defaultState = {
 
 const knave = (state=defaultState, action) => {
     switch(action.type){
-        case 'GENERATE': 
+        case 'GENERATE_KNAVE': 
             return state = {
                 ...state
             }
@@ -16,6 +16,19 @@ const knave = (state=defaultState, action) => {
                 ...state, 
                 abilities: action.abilities
             }
+        case 'GENERATE_TRAITS': 
+            return state = {
+                ...state, 
+                traits: action.traits
+            }
+        // case 'GENERATE_TRAIT': 
+        //     return state = {
+        //         ...state, 
+        //         state.traits: {
+        //             ...traits, 
+        //             [action.trait]: action.newValue
+        //         }
+        //     }
         default: 
             return state 
     }

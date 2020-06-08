@@ -1,3 +1,5 @@
+import { abilityScoreTitles } from '../../data'
+
 // generate one score 
 const rollAbilityScore = () => {
     // return lowest of 3 D6 rolls
@@ -11,8 +13,6 @@ const rollAbilityScore = () => {
     return scores[0]; 
 }
 
-// create array of ability scores that need generated 
-const abilityScoreTitles = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
 
 // function to generate all ability scores 
 export const generateAbilityScores = () => {
