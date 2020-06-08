@@ -4,7 +4,9 @@ class Traits extends Component {
     render(){
         return(
             <>
-            
+                <h1>
+                    Traits
+                </h1>
             </>
         )
     }
