@@ -1,13 +1,20 @@
 import React, { Component } from 'react' 
 import { connect } from 'react-redux'
+import styled from 'styled-components'
 
+
+const Title = styled.h1`
+font-size: 1.5em;
+text-align: center;
+color: palevioletred;
+`;
 class Abilities extends Component {
     render(){
         return(
             <>
-                <h1>
+                <Title>
                     Abilities
-                </h1>
+                </Title>
             </>
         )
     }

@@ -13,3 +13,19 @@ export const traits = {
     background:['Alchemist','Beggar','Butcher'],
     misfortune:['Abandoned','Addicted','Blackmailed']
 };
+
+
+/*
+item object: 
+
+{
+    name
+    defense 
+    damage
+    hands
+    slot
+    quality
+}
+
+this covers all attributes an item can have besides cost, which can always be manually added later (but probably won't be!)
+*/
