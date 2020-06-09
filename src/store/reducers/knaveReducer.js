@@ -1,7 +1,8 @@
 const defaultState = {
     traits:{}, 
     abilities:'',
-    inventory:[]
+    inventory:[],
+    stats:{}
 }
 
 
@@ -34,6 +35,11 @@ const knave = (state=defaultState, action) => {
                 ...state, 
                 inventory: action.inventory
             }
+        case 'GENERATE_STATS':
+            return state = {   
+                ...state, 
+                stats: action.stats
+        }
         default: 
             return state 
     }

@@ -14,12 +14,13 @@ const generateAbilityScore = () => {
 }
 
 
-
 // function to generate all ability scores 
 export const generateAbilityScores = () => {
-    console.log('generateAbilityScores() fired')
+    // console.log('generateAbilityScores() fired')
     // make abilities object that will hold ability scores, then set the state's ability scores to that object with dispatch 
     let abilities = {}; 
     abilityScoreTitles.forEach(ability => abilities[ability] = generateAbilityScore())
     return {type:'GENERATE_ABILITY_SCORES', abilities:abilities};
 }
+
+
