@@ -1,21 +1,20 @@
 import React, { Component } from 'react' 
 import { connect } from 'react-redux'
 import styled from 'styled-components'
+import {mainComponentStyle} from '../styling/generaStyles'
+import { mainHeaderStyle } from '../styling/generaStyles'
 
+const AbilitiesContainer = styled.div`${mainComponentStyle()}`;
+const AbilitiesHeader = styled.h1`${mainHeaderStyle()}`;
 
-const Title = styled.h1`
-font-size: 1.5em;
-text-align: center;
-color: palevioletred;
-`;
 class Abilities extends Component {
     render(){
         return(
-            <>
-                <Title>
+            <AbilitiesContainer>
+                <AbilitiesHeader>
                     Abilities
-                </Title>
-            </>
+                </AbilitiesHeader>
+            </AbilitiesContainer>
         )
     }
 }

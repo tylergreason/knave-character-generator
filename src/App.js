@@ -15,9 +15,9 @@ import { generateInventory } from './store/actions/inventoryActions'
 class App extends Component {
     componentDidMount = () => {
         console.log('App mounted')
+        this.props.generateInventory(); 
         this.props.generateAbilityScores();
         this.props.generateTraits(); 
-        this.props.generateInventory(); 
     }
 
 

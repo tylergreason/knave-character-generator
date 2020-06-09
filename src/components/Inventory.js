@@ -1,14 +1,36 @@
 import React, { Component } from 'react' 
 import {connect} from 'react-redux'
+import InventoryCard from './InventoryCard'
+import styled from 'styled-components'
+import { mainComponentStyle } from '../styling/generaStyles'
+import { mainHeaderStyle } from '../styling/generaStyles'
 
+const InventoryContainer = styled.div`
+    ${mainComponentStyle()}
+`
+
+const InventoryHeader = styled.h1`${mainHeaderStyle()}`
 class Inventory extends Component {
+
+    // function to render inventory cards 
+    renderInventoryCards = inventory => {
+            return inventory.map((item, index) => {
+                    return <InventoryCard 
+                        key={index}
+                        item={item}
+                    ></InventoryCard>
+            })
+    }
+
+
     render(){
         return(
-            <>
-                <h1>
+            <InventoryContainer>
+                <InventoryHeader>
                     Inventory
-                </h1>
-            </>
+                </InventoryHeader>
+                {this.renderInventoryCards(this.props.inventory)}
+            </InventoryContainer>
         )
     }
 }

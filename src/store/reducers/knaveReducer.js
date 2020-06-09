@@ -1,7 +1,7 @@
 const defaultState = {
-    traits:'', 
+    traits:{}, 
     abilities:'',
-    inventory:''
+    inventory:[]
 }
 
 

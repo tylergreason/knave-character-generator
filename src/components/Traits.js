@@ -3,14 +3,17 @@ import { connect } from 'react-redux'
 import { generateTrait } from '../store/actions/traitActions'
 import TraitCard from './TraitCard'
 import styled from 'styled-components'
+import {mainComponentStyle} from '../styling/generaStyles'
 
     // styled container for traits 
     const TraitContainer = styled.div`
-        /* background-color: rgb(100,100,100);
-        border-radius: 10px; */
+        /* background-color: rgb(100,100,100); */
+        /* border: 1px solid black;
+        border-radius: 10px; 
         padding: 10px; 
         width: 50%;
-        margin: auto; 
+        margin: auto;  */
+        ${mainComponentStyle()}
     `
 
     const TraitHeader = styled.h1`
@@ -37,14 +40,12 @@ class Traits extends Component {
 
     render(){
         return(
-            <>
-                <TraitContainer>
+            <TraitContainer>
                 <TraitHeader>
                     Traits
                 </TraitHeader>
                     {this.renderTraitCards(this.props.traits)}
-                </TraitContainer>
-            </>
+            </TraitContainer>
         )
     }
 }
