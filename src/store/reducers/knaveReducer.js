@@ -21,14 +21,14 @@ const knave = (state=defaultState, action) => {
                 ...state, 
                 traits: action.traits
             }
-        // case 'GENERATE_TRAIT': 
-        //     return state = {
-        //         ...state, 
-        //         state.traits: {
-        //             ...traits, 
-        //             [action.trait]: action.newValue
-        //         }
-        //     }
+        case 'GENERATE_TRAIT': 
+            return state = {
+                ...state, 
+                traits: {
+                    ...state.traits, 
+                    [action.trait]: action.newValue
+                }
+            }
         case 'GENERATE_INVENTORY': 
             return state = {
                 ...state, 

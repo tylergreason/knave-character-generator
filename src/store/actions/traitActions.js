@@ -7,7 +7,7 @@ export const generateTraits = () => {
     let newTraits = {}; 
     for (const trait in traits){
         // find list length 
-        let l = traits[trait].length-1; 
+        let l = traits[trait].length; 
         // find random value in list length 
         let value = Math.floor(Math.random()*l)
         // set the newTrait's object's trait to the random trait
