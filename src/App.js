@@ -22,19 +22,18 @@ class App extends Component {
         this.props.generateTraits(); 
         // debugger
         this.props.generateStats(); 
-        console.log('jlskdjflk')
     }
     
     
     render(){
         return (
             <div className="App">
-            <Title title='Knave Character Generator'></Title>
-            <Stats> </Stats>
-            <Abilities></Abilities>
-            <Inventory></Inventory>
-            <Traits></Traits>
-            </div>
+                <Title title='Knave Character Generator'></Title>
+                <Stats></Stats>
+                <Abilities></Abilities>
+                <Inventory></Inventory>
+                <Traits></Traits>
+                </div>
             );
         }
 }

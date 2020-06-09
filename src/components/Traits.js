@@ -3,14 +3,17 @@ import { connect } from 'react-redux'
 import { generateTrait } from '../store/actions/traitActions'
 import TraitCard from './TraitCard'
 import styled from 'styled-components'
-import {mainComponentStyle} from '../styling/generaStyles'
+import {mainComponentStyle, subHeader} from '../styling/generaStyles'
 
     // styled container for traits 
     const TraitContainer = styled.div`${mainComponentStyle()}`
 
     const TraitHeader = styled.h1`
         text-align: center;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
+    `
+    const TraitSubText = styled.div`
+        ${subHeader()}
     `
 
 class Traits extends Component {
@@ -33,6 +36,9 @@ class Traits extends Component {
             <TraitContainer>
                 <TraitHeader>
                     Traits
+                    <TraitSubText>
+                        Click to generate a new trait
+                    </TraitSubText>
                 </TraitHeader>
                     {this.renderTraitCards(this.props.traits)}
             </TraitContainer>

@@ -26,3 +26,24 @@ export const listStyle = () => {
     justify-content: space-around;
     `
 }
+
+
+export const listStyle__ListItemName = () => {return `
+    width: 40%;
+    text-align: left; 
+`}
+
+export const listStyle__ListItemValue = () => {
+    return `
+    /* width: 20%; */
+    text-align: right;
+    `
+}
+
+export const subHeader = () => {
+    return `
+        font-size: 1rem; 
+        color: rgb(100,100,100); 
+        text-align: center;
+    `
+}

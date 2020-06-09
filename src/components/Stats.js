@@ -2,25 +2,80 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { mainComponentStyle, mainHeaderStyle } from '../styling/generaStyles'
-
+import { setArmorStats } from '../store/actions/statActions'
+import StatCard from './StatCard'
 const StatsContainer = styled.div`${mainComponentStyle()}`
 const StatsHeader = styled.h1`${mainHeaderStyle()}`
 
 class Stats extends Component {
+    
+    componentDidUpdate = () => {
+        // set armor defense value once stats and inventory have been set 
+        if (this.props.stats.armorDefense === 0){
+            let totalArmor = 0; 
+            console.log(this.props.inventory)
+            this.props.inventory.forEach(i => totalArmor += i.defense); 
+            console.log(totalArmor)
+            if (totalArmor < 1){
+                console.log('armor set')
+                this.props.setArmorStats(11)
+            }else{
+                this.props.setArmorStats(totalArmor); 
+            }
+        }
+    }
+
+    renderStatCards = stats => {
+        return (
+        <>
+        <StatCard 
+            statName={'Name'}
+            statValue={stats['name']}
+        ></StatCard>
+        {/* <StatCard 
+            statName={'Armor Bonus'}
+            statValue={stats['armorBonus']}
+        ></StatCard> */}
+        {/* <StatCard 
+            statName={'Armor Defense'}
+            statValue = {`${stats['armorDefense']} / ${stats['armorBonus']}`}
+            statValue={stats['armorDefense']}
+        ></StatCard> */}
+        <StatCard 
+            statName={'Hit Points'}
+            statValue={stats['hitPoints']}
+        ></StatCard>
+        </>
+        )
+
+        // let keys = Object.keys(stats); 
+        // return keys.map(stat => {
+        //     console.log(stat)
+        //     return <StatCard
+        //             key={stat}
+        //             statName={stat}
+        //             statValue={stats[stat]}
+        //         ></StatCard>
+        // })
+    }
+
     render(){
         return(
         <StatsContainer>
             <StatsHeader>
                 Statistics
             </StatsHeader>
+            {this.renderStatCards(this.props.stats)}
         </StatsContainer>)
     }
 }
 
 const mapStateToProps = state => {
     return {
-        stats: ''
+        stats: state.knave.stats,
+        abilities: state.knave.abilities, 
+        inventory: state.knave.inventory
     }
 }
 
-export default connect(mapStateToProps)(Stats)
+export default connect(mapStateToProps, {setArmorStats})(Stats)

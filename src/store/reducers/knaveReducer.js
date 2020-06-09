@@ -33,13 +33,26 @@ const knave = (state=defaultState, action) => {
         case 'GENERATE_INVENTORY': 
             return state = {
                 ...state, 
-                inventory: action.inventory
+                inventory: action.inventory,
+                stats: {
+                    ...state.stats, 
+                    armorDefense: action.armorDefense
+                }
             }
         case 'GENERATE_STATS':
             return state = {   
                 ...state, 
                 stats: action.stats
         }
+        case 'SET_ARMOR_STATS': 
+            return state = {
+                ...state, 
+                stats: {
+                    ...state.stats, 
+                    armorBonus: action.armorBonus, 
+                    armorDefense: action.armorDefense
+                }
+            }
         default: 
             return state 
     }

@@ -9,9 +9,15 @@ export const generateInventory = () => {
     items.push(dungeoneeringGear[Math.floor(Math.random()*dungeoneeringGear.length)])
     items.push(armors[Math.floor(Math.random()*armors.length)])
     console.log(items); 
-    return {type:'GENERATE_INVENTORY', inventory: items}
+
+    // generate total armor bonus given by all items 
+    let totalArmorDefense = 0; 
+    items.forEach(item => totalArmorDefense += item.defense)
+
+    return {type:'GENERATE_INVENTORY', inventory: items, armorDefense: totalArmorDefense}
 }
 
 export const addInventoryItem = (item) => {
     return {type:'ADD_INVENTORY_ITEM', item: item}
 }
+

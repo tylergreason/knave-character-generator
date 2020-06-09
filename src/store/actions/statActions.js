@@ -11,3 +11,7 @@ export const generateStats = () => {
     };
     return {type: 'GENERATE_STATS', stats:stats};
 }
+
+export const setArmorStats = (armorDefense) => {
+    return {type:'SET_ARMOR_STATS', armorDefense: armorDefense, armorBonus: (armorDefense-10) }
+}
