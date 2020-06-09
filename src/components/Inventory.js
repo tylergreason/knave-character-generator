@@ -1,5 +1,6 @@
 import React, { Component } from 'react' 
 import {connect} from 'react-redux'
+
 class Inventory extends Component {
     render(){
         return(
