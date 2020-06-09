@@ -29,16 +29,16 @@ item object:
 this covers all attributes an item can have besides cost, which can always be manually added later (but probably won't be!)
 */
 
-class Item {
-    constructor(name, defense = 0, damage = 0, hands = 0, slot = 1, quality = 0){
-        this.name = name;
-        this.defense  = defense; 
-        this.damage = damage; 
-        this.hands = hands;
-        this.slot = slot;
-        this.quality = quality; 
-    }
-}
+// class Item {
+//     constructor(name, defense = 0, damage = 0, hands = 0, slot = 1, quality = 0){
+//         this.name = name;
+//         this.defense  = defense; 
+//         this.damage = damage; 
+//         this.hands = hands;
+//         this.slot = slot;
+//         this.quality = quality; 
+//     }
+// }
 
 
 

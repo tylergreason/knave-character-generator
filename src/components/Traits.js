@@ -1,9 +1,25 @@
 import React, { Component } from 'react'; 
 import { connect } from 'react-redux'
-import TraitCard from './TraitCard'
 import { generateTrait } from '../store/actions/traitActions'
+import TraitCard from './TraitCard'
+import styled from 'styled-components'
+
+    // styled container for traits 
+    const TraitContainer = styled.div`
+        /* background-color: rgb(100,100,100);
+        border-radius: 10px; */
+        padding: 10px; 
+        width: 50%;
+        margin: auto; 
+    `
+
+    const TraitHeader = styled.h1`
+        text-align: center;
+        text-transform: uppercase;
+    `
 
 class Traits extends Component {
+
 
     // function to make trait cards for each trait 
     renderTraitCards = traits => {
@@ -22,11 +38,12 @@ class Traits extends Component {
     render(){
         return(
             <>
-                <h1>
+                <TraitContainer>
+                <TraitHeader>
                     Traits
-                    {/* <br></br> */}
+                </TraitHeader>
                     {this.renderTraitCards(this.props.traits)}
-                </h1>
+                </TraitContainer>
             </>
         )
     }
