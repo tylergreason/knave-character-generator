@@ -6,15 +6,7 @@ import styled from 'styled-components'
 import {mainComponentStyle} from '../styling/generaStyles'
 
     // styled container for traits 
-    const TraitContainer = styled.div`
-        /* background-color: rgb(100,100,100); */
-        /* border: 1px solid black;
-        border-radius: 10px; 
-        padding: 10px; 
-        width: 50%;
-        margin: auto;  */
-        ${mainComponentStyle()}
-    `
+    const TraitContainer = styled.div`${mainComponentStyle()}`
 
     const TraitHeader = styled.h1`
         text-align: center;
@@ -22,8 +14,6 @@ import {mainComponentStyle} from '../styling/generaStyles'
     `
 
 class Traits extends Component {
-
-
     // function to make trait cards for each trait 
     renderTraitCards = traits => {
         return Object.keys(traits).map((key, value) => {
