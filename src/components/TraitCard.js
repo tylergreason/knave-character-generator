@@ -13,7 +13,7 @@ const TraitCardStyling = styled.div`
 
 const SpanLeft = styled.span`
     width: 40%;
-    text-align: left; 
+    /* text-align: left;  */
 `
 
 const SpanRight = styled.span` 
