@@ -23,7 +23,7 @@ class Inventory extends Component {
     usedInventorySlots = (inventory) => {
         let total = 0; 
         inventory.forEach(item => total+=item.slot); 
-        return total + '/'; 
+        return total + '/' + this.props.inventorySlots; 
     }
 
     render(){
@@ -39,7 +39,9 @@ class Inventory extends Component {
 }
 const mapStateToProps = state => {
     return {
-        inventory: state.knave.inventory
+        inventory: state.knave.inventory,
+        // get constitution defense to use for showing available inventory slots
+        inventorySlots: state.knave.abilities.Constitution+10
     }
 }
 export default connect(mapStateToProps,{})(Inventory); 
