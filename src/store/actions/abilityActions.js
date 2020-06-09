@@ -1,7 +1,7 @@
 import { abilityScoreTitles } from '../../data'
 
 // generate one score 
-const rollAbilityScore = () => {
+const generateAbilityScore = () => {
     // return lowest of 3 D6 rolls
     let scores = []; 
     for (let i = 0; i < 3; i++){
@@ -14,11 +14,12 @@ const rollAbilityScore = () => {
 }
 
 
+
 // function to generate all ability scores 
 export const generateAbilityScores = () => {
     console.log('generateAbilityScores() fired')
     // make abilities object that will hold ability scores, then set the state's ability scores to that object with dispatch 
     let abilities = {}; 
-    abilityScoreTitles.forEach(ability => abilities[ability] = rollAbilityScore())
+    abilityScoreTitles.forEach(ability => abilities[ability] = generateAbilityScore())
     return {type:'GENERATE_ABILITY_SCORES', abilities:abilities};
 }

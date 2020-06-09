@@ -25,7 +25,7 @@ class Abilities extends Component {
                 <AbilitiesHeader>
                     Abilities
                 </AbilitiesHeader>
-                {this.renderAbilityCards(this.props.abilities)}
+                {this.renderAbilityCards(this.props.abilities)} 
             </AbilitiesContainer>
         )
     }
