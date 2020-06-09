@@ -25,9 +25,9 @@ class App extends Component {
         return (
             <div className="App">
             <Title title='Knave Character Generator'></Title>
-            <Traits></Traits>
             <Abilities></Abilities>
             <Inventory></Inventory>
+            <Traits></Traits>
             </div>
             );
         }

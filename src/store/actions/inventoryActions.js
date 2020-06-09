@@ -11,3 +11,7 @@ export const generateInventory = () => {
     console.log(items); 
     return {type:'GENERATE_INVENTORY', inventory: items}
 }
+
+export const addInventoryItem = (item) => {
+    return {type:'ADD_INVENTORY_ITEM', item: item}
+}
