@@ -5,7 +5,11 @@ import { setArmorStats } from '../store/actions/statActions'
 import StatCard from './StatCard'
 import { ContainerStyle, HeaderStyle, SubHeader } from '../styling/generaStyles'
 
-const StatsContainer = styled(ContainerStyle)``
+const StatsContainer = styled(ContainerStyle)`
+    border: none; 
+    font-size: 2rem;
+    text-align: center; 
+    `
 // const StatsContainer = styled.div`${mainComponentStyle()}`
 const StatsHeader = styled(HeaderStyle)``
 
@@ -49,26 +53,19 @@ class Stats extends Component {
             ></StatCard>
         </>
         )
-
-        // let keys = Object.keys(stats); 
-        // return keys.map(stat => {
-        //     console.log(stat)
-        //     return <StatCard
-        //             key={stat}
-        //             statName={stat}
-        //             statValue={stats[stat]}
-        //         ></StatCard>
-        // })
     }
 
     render(){
         return(
         <StatsContainer>
-            <StatsHeader>
+        {this.props.stats.name}, 
+        {this.props.stats.hitPoints}HP
+            {/* <StatsHeader>
                 Statistics
             </StatsHeader>
-            {this.renderStatCards(this.props.stats)}
-        </StatsContainer>)
+            {this.renderStatCards(this.props.stats)} */}
+        </StatsContainer>
+        )
     }
 }
 

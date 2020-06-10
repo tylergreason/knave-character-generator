@@ -6,14 +6,19 @@ const lightColor = `rgb(255,255,255)`;
 const darkColor = `rgb(0,0,0)`;
 
 export const ContainerStyle = styled.div`
-    border: 1px solid ${darkColor};
-    border-radius: 10px; 
-    padding: 10px; 
+    border: 8px solid ${darkColor};
+    border-radius: 30px; 
+    padding: 20px; 
+    padding-top: 10px; 
     width: 50%;
     margin: 15px auto;  
+    max-width: 400px;
     `
 export const HeaderStyle = styled.h1`
     text-align: center; 
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: auto; 
     `
 
 export const SubHeader = styled.div `
@@ -25,7 +30,7 @@ export const SubHeader = styled.div `
 
 // listStyle() wraps around an element that contains text, like a trait and its value, that wants the values to be on the left and right side of the element's container 
 export const ListStyle = styled.span`
-    font-size: 2rem;
+    font-size: 1.5rem;
     // border-bottom: 1px solid black;
     /* text-align: center; */
     text-transform: capitalize;
@@ -42,6 +47,6 @@ export const ListItemName = styled.span`
 `
 
 export const ListItemValue = styled.span`
-    /* width: 20%; */
+    width: 20%;
     text-align: right;
     `

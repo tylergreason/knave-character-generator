@@ -24,10 +24,10 @@ class Abilities extends Component {
             <AbilitiesContainer>
                 <AbilitiesHeader>
                     Abilities
+                </AbilitiesHeader>
                     <AbilitiesSubText>
                         Ability bonus/defense
                     </AbilitiesSubText>
-                </AbilitiesHeader>
                 {this.renderAbilityCards(this.props.abilities)} 
             </AbilitiesContainer>
         )

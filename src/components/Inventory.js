@@ -37,10 +37,10 @@ class Inventory extends Component {
             <InventoryContainer>
                 <InventoryHeader>
                     Inventory {this.usedInventorySlots(this.props.inventory)}
+                </InventoryHeader>
                     <InventorySubText>
                         Each item takes up one slot unless otherwise noted
                     </InventorySubText>
-                </InventoryHeader>
                 {this.renderInventoryCards(this.props.inventory)}
             </InventoryContainer>
         )

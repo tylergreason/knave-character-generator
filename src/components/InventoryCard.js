@@ -2,18 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import {ListStyle, ListItemName, ListItemValue} from '../styling/generaStyles'
 
-const InventoryCardStyling = styled(ListStyle)`
-    /* text-align: left;  */
-    /* justify-content: start; */
-    `
+const InventoryCardStyling = styled(ListStyle)``
 const ItemTitle = styled(ListItemName)`
-    width: 80%; 
+    width: 85%; 
     `
 
 const ItemQualitySpan = styled.span`
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-style: italic;
-`
+    `
 
 // function to decide what data to render from an item 
 const renderItemData = item => {

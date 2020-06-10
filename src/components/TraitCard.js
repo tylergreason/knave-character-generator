@@ -1,25 +1,25 @@
 import React from 'react' 
 import styled from 'styled-components'
+import {ListStyle, ListItemName, ListItemValue} from '../styling/generaStyles'
 
-const TraitCardStyling = styled.div`
-    font-size: 2rem;
+
+const TraitCardStyling = styled(ListStyle)`
+    /* font-size: 2rem;
     border-bottom: 1px solid black;
-    /* text-align: center; */
     text-transform: capitalize;
     display: flex; 
     flex-flow: row; 
-    justify-content: space-around;
+    justify-content: space-around; */
+    &:hover {
+        cursor: pointer;
+    }
 `
 
-const SpanLeft = styled.span`
-    width: 40%;
-    /* text-align: left;  */
-`
+const SpanLeft = styled(ListItemName)``
 
-const SpanRight = styled.span` 
-    width: 40%;
-    text-align: right; 
-`
+const SpanRight = styled(ListItemValue)`
+        width: 40%;
+    `
 
 
 

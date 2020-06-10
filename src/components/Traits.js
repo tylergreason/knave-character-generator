@@ -32,10 +32,10 @@ class Traits extends Component {
             <TraitContainer>
                 <TraitHeader>
                     Traits
+                </TraitHeader>
                     <TraitSubText>
                         Click to generate a new trait
                     </TraitSubText>
-                </TraitHeader>
                     {this.renderTraitCards(this.props.traits)}
             </TraitContainer>
         )
