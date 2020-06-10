@@ -547,7 +547,7 @@ export const armors = [
         quality: 1
     },
     {
-        name: 'Gambeson',
+        name: 'Gambeson armor',
         defense: 12,
         damage: 0,
         hands: 0,
@@ -555,7 +555,7 @@ export const armors = [
         quality: 3
     },
     {
-        name: 'Brigandine',
+        name: 'Brigandine armor',
         defense: 13,
         damage: 0,
         hands: 0,
@@ -563,7 +563,7 @@ export const armors = [
         quality: 4
     },
     {
-        name: 'Chain',
+        name: 'Chain armor',
         defense: 14,
         damage: 0,
         hands: 0,
@@ -571,7 +571,7 @@ export const armors = [
         quality: 5
     },
     {
-        name: 'Half Plate',
+        name: 'Half Plate armor',
         defense: 15,
         damage: 0,
         hands: 0,
@@ -579,7 +579,7 @@ export const armors = [
         quality: 6
     },
     {
-        name: 'Full Plate',
+        name: 'Full Plate armor',
         defense: 16,
         damage: 0,
         hands: 0,
