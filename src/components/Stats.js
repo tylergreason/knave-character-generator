@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { mainComponentStyle, mainHeaderStyle } from '../styling/generaStyles'
 import { setArmorStats } from '../store/actions/statActions'
 import StatCard from './StatCard'
-const StatsContainer = styled.div`${mainComponentStyle()}`
-const StatsHeader = styled.h1`${mainHeaderStyle()}`
+import { ContainerStyle, HeaderStyle, SubHeader } from '../styling/generaStyles'
+
+const StatsContainer = styled(ContainerStyle)``
+// const StatsContainer = styled.div`${mainComponentStyle()}`
+const StatsHeader = styled(HeaderStyle)``
 
 class Stats extends Component {
     
@@ -28,23 +30,23 @@ class Stats extends Component {
     renderStatCards = stats => {
         return (
         <>
-        <StatCard 
-            statName={'Name'}
-            statValue={stats['name']}
-        ></StatCard>
-        {/* <StatCard 
-            statName={'Armor Bonus'}
-            statValue={stats['armorBonus']}
-        ></StatCard> */}
-        {/* <StatCard 
-            statName={'Armor Defense'}
-            statValue = {`${stats['armorDefense']} / ${stats['armorBonus']}`}
-            statValue={stats['armorDefense']}
-        ></StatCard> */}
-        <StatCard 
-            statName={'Hit Points'}
-            statValue={stats['hitPoints']}
-        ></StatCard>
+            <StatCard 
+                statName={'Name'}
+                statValue={stats['name']}
+            ></StatCard>
+            {/* <StatCard 
+                statName={'Armor Bonus'}
+                statValue={stats['armorBonus']}
+            ></StatCard> */}
+            {/* <StatCard 
+                statName={'Armor Defense'}
+                statValue = {`${stats['armorDefense']} / ${stats['armorBonus']}`}
+                statValue={stats['armorDefense']}
+            ></StatCard> */}
+            <StatCard 
+                statName={'Hit Points'}
+                statValue={stats['hitPoints']}
+            ></StatCard>
         </>
         )
 

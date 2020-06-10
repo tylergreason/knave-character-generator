@@ -3,18 +3,14 @@ import { connect } from 'react-redux'
 import { generateTrait } from '../store/actions/traitActions'
 import TraitCard from './TraitCard'
 import styled from 'styled-components'
-import {mainComponentStyle, subHeader} from '../styling/generaStyles'
+import {ContainerStyle, HeaderStyle, SubHeader} from '../styling/generaStyles'
 
     // styled container for traits 
-    const TraitContainer = styled.div`${mainComponentStyle()}`
+    const TraitContainer = styled(ContainerStyle)``
 
-    const TraitHeader = styled.h1`
-        text-align: center;
-        /* text-transform: uppercase; */
-    `
-    const TraitSubText = styled.div`
-        ${subHeader()}
-    `
+    const TraitHeader = styled(HeaderStyle)``
+
+    const TraitSubText = styled(SubHeader)``
 
 class Traits extends Component {
     // function to make trait cards for each trait 

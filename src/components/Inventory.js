@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import InventoryCard from './InventoryCard'
 import styled from 'styled-components'
-import { mainComponentStyle } from '../styling/generaStyles'
-import { mainHeaderStyle } from '../styling/generaStyles'
+import { ContainerStyle, HeaderStyle, SubHeader } from '../styling/generaStyles'
 
-const InventoryContainer = styled.div`${mainComponentStyle()}`
-const InventoryHeader = styled.h1`${mainHeaderStyle()}`
+const InventoryContainer = styled(ContainerStyle)``
+const InventoryHeader = styled(HeaderStyle)``
+const InventorySubText = styled(SubHeader)``
+
 
 class Inventory extends Component {
     // function to render inventory cards 
@@ -31,6 +32,9 @@ class Inventory extends Component {
             <InventoryContainer>
                 <InventoryHeader>
                     Inventory ({this.usedInventorySlots(this.props.inventory)})
+                    <InventorySubText>
+                        Each item takes up one slot unless otherwise noted
+                    </InventorySubText>
                 </InventoryHeader>
                 {this.renderInventoryCards(this.props.inventory)}
             </InventoryContainer>

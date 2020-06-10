@@ -1,14 +1,14 @@
 import React, { Component } from 'react' 
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import {mainComponentStyle} from '../styling/generaStyles'
-import { mainHeaderStyle } from '../styling/generaStyles'
+import {ContainerStyle, HeaderStyle, SubHeader} from '../styling/generaStyles'
 import AbilityCard from './AbilityCard'
-const AbilitiesContainer = styled.div`${mainComponentStyle()}`;
-const AbilitiesHeader = styled.h1`${mainHeaderStyle()}`;
+
+const AbilitiesContainer = styled(ContainerStyle)``;
+const AbilitiesHeader = styled(HeaderStyle)``
+const AbilitiesSubText = styled(SubHeader)``
 
 class Abilities extends Component {
-
     // function to render abilities 
     renderAbilityCards = abilities => {
         return Object.keys(abilities).map((key,value) => {
@@ -24,6 +24,9 @@ class Abilities extends Component {
             <AbilitiesContainer>
                 <AbilitiesHeader>
                     Abilities
+                    <AbilitiesSubText>
+                        Ability bonus/defense
+                    </AbilitiesSubText>
                 </AbilitiesHeader>
                 {this.renderAbilityCards(this.props.abilities)} 
             </AbilitiesContainer>
