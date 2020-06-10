@@ -1,19 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import {ListStyle, ListItemName, ListItemValue} from '../styling/generaStyles'
 
-const InventoryCardStyling = styled.div`
-    font-size: 2rem; 
-    border-bottom: 1px solid black; 
-    color: rgb(100,100,100);
-    &:hover{
-        color: rgb(0,0,0);
-        font-size: 2.2rem;
-    }
-`
+const InventoryCardStyling = styled(ListStyle)`
+    /* text-align: left;  */
+    /* justify-content: start; */
+    `
+const ItemTitle = styled(ListItemName)`
+    width: 80%; 
+    `
 
-const ItemNameSpan = styled.span`
-    /* color:blue; */
-`
 const ItemQualitySpan = styled.span`
     font-size: 1.5rem;
     font-style: italic;
@@ -28,12 +24,19 @@ const renderItemData = item => {
                 itemQualities += `${i}: ${item[i]}, `
         }
     })
+    if (item.slot > 1){
+        itemQualities += `${item.slot} slots, `
+    }
     // 
     itemQualities = itemQualities.substring(0, itemQualities.length-2);
     if (itemQualities.length > 1){
-        return <><ItemNameSpan>{string}</ItemNameSpan> <ItemQualitySpan>{itemQualities + ')'}</ItemQualitySpan></>;
+        return <ItemTitle> - {string}
+        <ItemQualitySpan>{itemQualities + ')'}</ItemQualitySpan>
+        </ItemTitle> 
     }else{
-        return <ItemNameSpan>{string}</ItemNameSpan>
+        return <ItemTitle> - {string}
+            <ItemQualitySpan></ItemQualitySpan>
+        </ItemTitle>
     }
 }
 

@@ -24,8 +24,7 @@ export const SubHeader = styled.div `
 
 
 // listStyle() wraps around an element that contains text, like a trait and its value, that wants the values to be on the left and right side of the element's container 
-export const listStyle = () => {
-    return `
+export const ListStyle = styled.span`
     font-size: 2rem;
     // border-bottom: 1px solid black;
     /* text-align: center; */
@@ -34,17 +33,15 @@ export const listStyle = () => {
     flex-flow: row; 
     justify-content: space-around;
     `
-}
 
 
-export const listStyle__ListItemName = () => {return `
+
+export const ListItemName = styled.span`
     width: 40%;
     text-align: left; 
-`}
+`
 
-export const listStyle__ListItemValue = () => {
-    return `
+export const ListItemValue = styled.span`
     /* width: 20%; */
     text-align: right;
     `
-}

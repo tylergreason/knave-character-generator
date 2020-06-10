@@ -1,10 +1,11 @@
 import React from 'react'; 
 import styled from 'styled-components'
-import {listStyle, listStyle__ListItemValue, listStyle__ListItemName} from '../styling/generaStyles'
+import {ListStyle, ListItemName, ListItemValue} from '../styling/generaStyles'
 
-const StatCardStyled = styled.div`${listStyle()}`
-const StatTitle = styled.span `${listStyle__ListItemName()}`
-const StatValue = styled.span `${listStyle__ListItemValue()}`
+
+const StatCardStyled = styled(ListStyle)``
+const StatTitle = styled(ListItemName)``
+const StatValue = styled(ListItemValue)``
 
 
 const StatCard = props => {

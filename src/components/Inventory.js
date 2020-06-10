@@ -7,7 +7,10 @@ import { ContainerStyle, HeaderStyle, SubHeader } from '../styling/generaStyles'
 const InventoryContainer = styled(ContainerStyle)``
 const InventoryHeader = styled(HeaderStyle)``
 const InventorySubText = styled(SubHeader)``
-
+const InventorySpace = styled.span`
+    font-size: 1.5rem;
+    color: rgb(100,100,100);
+    `
 
 class Inventory extends Component {
     // function to render inventory cards 
@@ -24,14 +27,16 @@ class Inventory extends Component {
     usedInventorySlots = (inventory) => {
         let total = 0; 
         inventory.forEach(item => total+=item.slot); 
-        return total + '/' + this.props.inventorySlots; 
+        return (<InventorySpace>
+            ({total}/{this.props.inventorySlots})
+        </InventorySpace>)
     }
 
     render(){
         return(
             <InventoryContainer>
                 <InventoryHeader>
-                    Inventory ({this.usedInventorySlots(this.props.inventory)})
+                    Inventory {this.usedInventorySlots(this.props.inventory)}
                     <InventorySubText>
                         Each item takes up one slot unless otherwise noted
                     </InventorySubText>

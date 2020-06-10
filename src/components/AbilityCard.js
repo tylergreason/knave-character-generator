@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import {listStyle, listStyle__ListItemName, listStyle__ListItemValue} from '../styling/generaStyles'
+import {ListStyle, ListItemName, ListItemValue} from '../styling/generaStyles'
 
-const AbilityCardStyling = styled.div`
-    ${listStyle()}
+const AbilityCardStyling = styled(ListStyle)`
     justify-content:space-center;
-`
+    `
 
-const AbilityTitle = styled.span `${listStyle__ListItemName()}`
-const AbilityValue = styled.span `${listStyle__ListItemValue()}`
+const AbilityTitle = styled(ListItemName)``
+const AbilityValue = styled(ListItemValue)``
 
 const AbilityCard = props => {
     return(
